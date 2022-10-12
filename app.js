@@ -24,14 +24,14 @@ app.use(upload.array());
 app.use(express.static('public'));
 const port = process.env.PORT || '5000';
 
-mongoose.connect(env_custom_variable.parsed.MONGO_URI)
-  .then((result) => app.listen(port,function(){
-    console.log(`Server started on Port ${port}`);
-  }))
-  .catch((err) => {
-    console.log(err)
-    mongoose.disconnect()
-  });
+// mongoose.connect(env_custom_variable.parsed.MONGO_URI)
+//   .then((result) => app.listen(port,function(){
+//     console.log(`Server started on Port ${port}`);
+//   }))
+//   .catch((err) => {
+//     console.log(err)
+//     mongoose.disconnect()
+//   });
 
 app.use('/api', parent_router); 
 
