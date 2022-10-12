@@ -1,0 +1,14 @@
+1. For creation ticket:
+ (Postmethod) http://localhost:5000/api/ticketregistration
+
+{
+    "userid":"5f1d004ad73db35cfc7049c7",
+    "username":"raja1",
+    "ticketpriority":"high",
+    "ticketclosingndate":"",
+    "ticketusercomments":{
+        "raja1":"please see this matter ASAP network related"
+    }
+}
+
+2. 
