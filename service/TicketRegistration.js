@@ -11,10 +11,11 @@ const ticket_model = require('../model/ticket_model');
 const LoginRegsistration = async (userParam) => {
     return new Promise( async ( resolve, reject ) => {
         //console.log(userParam)
-        await login_model.findOne({ username: userParam.username }).then(function(data){ 
+        await login_model.findOne({ _id: userParam.username }).then(function(data){ 
             console.log("Ticket registration")  
             console.log(userParam) 
             //console.log(userParam) 
+
             const ticket_model_1 = new ticket_model(userParam);
                 //console.log("ticket_model_1")
                 //console.log(ticket_model_1) 

@@ -12,6 +12,7 @@ routes_request.post('/ticketregistration', VerifyToken, parent_service.TicketReg
 routes_request.post('/viewtickets',  VerifyToken, parent_service.ViewTicketsController)
 routes_request.post('/viewticketbyid',VerifyToken, parent_service.ViewTicketByIdController)
 routes_request.post('/updatebyid',VerifyToken, parent_service.UpdateTicketByIdController)
+
 routes_request.post('/postchatwithusrid',VerifyToken, parent_service.PostChatWithUserIdController)
 routes_request.post('/viewchathistory', VerifyToken, parent_service.ViewChatHistoryByIdController)
 
