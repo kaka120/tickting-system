@@ -30,14 +30,14 @@ const server = process.env.ser
 
 const MONGOURL = `mongodb+srv://${uName}:${password}@${server}/?retryWrites=true&w=majority`
 
-mongoose.connect(MONGOURL)
-  .then((result) => app.listen(port,function(){
-    console.log(`Server started on Port ${port}`);
-  }))
-  .catch((err) => {
-    console.log(err)
-    mongoose.disconnect()
-  });
+// mongoose.connect(MONGOURL)
+//   .then((result) => app.listen(port,function(){
+//     console.log(`Server started on Port ${port}`);
+//   }))
+//   .catch((err) => {
+//     console.log(err)
+//     mongoose.disconnect()
+//   });
 
 /*
 mongoose.connect(
@@ -57,4 +57,4 @@ mongoose.connect(
 */
 app.use('/api', parent_router); 
 
-app.get('/test', (req,res) => console.log(req.headers))
+app.get('/test', (req,res) => console.log(MONGOURL))
