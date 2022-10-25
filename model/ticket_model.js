@@ -13,7 +13,8 @@ const schema = new Schema.Schema({
         ticket_catagory: { type:  String , required: true},                       //  At any time               [ Update possible] 
         ticket_sub_catagory: { type: String , required: true},                    //  At any time               [ Update possible]
         location: { type: String , required: true},                               //  Only ticket creation time     
-        ticket_chat_group_id: { type: String, default: null }                     //  Only when if chat is started for an specific ticket 
+        ticket_chat_group_id: { type: String, default: null },                    //  Only when if chat is started for an specific ticket 
+        teamId: { type: String, default: null }                                   //  Assigned team or not [Note if no team assigned then null value]
 });
 
 
