@@ -25,6 +25,7 @@ const TeamRegistration = async (userParam) => {
                
                 const registaredTeam = new team_registration_model(userParam);
                 registaredTeam.teamID = shortid.generate() + userParam.userName.slice(0,2); 
+                registaredTeam.userId = userParam.userId; 
                 console.log("new team registration")
                 console.log({registaredTeam})
                 registaredTeam.save((error, registaredTeam) => {
