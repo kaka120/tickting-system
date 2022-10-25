@@ -17,7 +17,7 @@ var cors = require('cors')
 // Add headers
 app.use(cors())
 const parent_router = require('./routes/parent_router');
-const env_custom_variable = require('./env/env');
+require('dotenv').config()
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json());
 app.use(upload.array()); 
