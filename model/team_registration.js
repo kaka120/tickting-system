@@ -12,14 +12,14 @@
 const Schema = require('../helpers/model_library_support');
 
 const schema = new Schema.Schema({
-        teamName: { type: String , required: true}, 
-        teamDescription: { type: String , required: true},
-        teamCreationDate: {type: Date, default: Date.now},                    
-        teamClosingnDate: {type: Date, default: null}, 
-        teamRelatedIssueId: { type: String, default: null }, 
-        assignedUserIdSet: { type: String, default: null },
-        teamStatus: { type: String, default: "Open" },
-        TicketAssignedStatus: { type: String, default: "Not Assigned" }                
+        teamID: { type: String , required: true},                  // Auto Name assignment 
+        teamDescription: { type: String , required: true},           // Team description
+        teamCreationDate: {type: Date, default: Date.now},           //Team creation default Date         
+        teamClosingnDate: {type: Date, default: null},               //Team closing date
+        teamRelatedIssueId: { type: String, default: null },          //Team related issue id after the team is created on the time of ticket created
+        assignedUserIdSet: { type : Array , "default" : [] },           // User group id 
+        teamStatus: { type: String, default: "Open" },                // Team status OPEN / CLOSED
+        TicketAssignedStatus: { type: String, default: "Not Assigned" } //Need to think assgned / not assigned             
 });
 
 
