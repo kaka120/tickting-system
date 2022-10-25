@@ -29,7 +29,7 @@ const password = process.env.pwd
 const server = process.env.ser
 
 const MONGOURL = `mongodb+srv://${uName}:${password}@${server}/?retryWrites=true&w=majority`
-
+console.log(MONGOURL)
 mongoose.connect(MONGOURL)
   .then((result) => app.listen(port,function(){
     console.log(`Server started on Port ${port}`);
@@ -38,7 +38,7 @@ mongoose.connect(MONGOURL)
     console.log(err)
     mongoose.disconnect()
   });
-  
+
 app.use('/api', parent_router); 
 
 app.get('/test', (req,res) => console.log(MONGOURL))
