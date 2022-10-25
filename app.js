@@ -38,23 +38,7 @@ mongoose.connect(MONGOURL)
     console.log(err)
     mongoose.disconnect()
   });
-
-/*
-mongoose.connect(
-  process.env.MONGO_URI,
-  {
-      user: process.env.USERNAME,
-      pass: process.env.PASSWORD,
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      useFindAndModify: false
-  },
-  (err) => {
-      if(err) {
-          console.log(err)
-      } else console.log("Connected");
-  });
-*/
+  
 app.use('/api', parent_router); 
 
 app.get('/test', (req,res) => console.log(MONGOURL))
