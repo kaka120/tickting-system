@@ -1,8 +1,8 @@
 const Schema = require('../helpers/model_library_support');
 
 const schema = new Schema.Schema({
-        username: { type: String,required: true },                                //  Concatination of firstname and secondname
-        userid: { type: String, required: true },                                 //  Id of the registration table
+        userName: { type: String,required: true },                                //  Concatination of firstname and secondname
+        userId: { type: String, required: true },                                 //  Id of the registration table
         ticket_creation_date: {type: Date, default: Date.now},                    //  Only ticket creation time
         ticket_incident_type: {type: String,required: true },                     //  Only ticket creation time
         ticket_status: { type: String, default: "Open" },                         //  Only ticket creation time [ Update possible [ Status: Open,closed ]]
