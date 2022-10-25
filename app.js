@@ -22,14 +22,15 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json());
 app.use(upload.array()); 
 app.use(express.static('public'));
-const port = process.env.PORT || '5000';
 
 const uName = process.env.usr 
 const password = process.env.pwd
 const server = process.env.ser
 
+const port = process.env.port ;
+
 const MONGOURL = `mongodb+srv://${uName}:${password}@${server}/?retryWrites=true&w=majority`
-console.log(MONGOURL)
+
 mongoose.connect(MONGOURL)
   .then((result) => app.listen(port,function(){
     console.log(`Server started on Port ${port}`);
