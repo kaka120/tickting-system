@@ -7,7 +7,7 @@ const shortid = require("shortid");
 const TicketRegistration = async (userParam) => {
     return new Promise( async ( resolve, reject ) => {
         await login_model.findOne({ userId: userParam.userId }).then(function(data){ 
-            ticket_model1 = new ticket_model(userParam);
+            const ticket_model1 = new ticket_model(userParam);
             ticket_model1.ticketID = shortid.generate() + userParam.userName.slice(0,2); 
             ticket_model1.save((error, registared_ticket) => {
                 if(error){
