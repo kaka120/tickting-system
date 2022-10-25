@@ -20,8 +20,8 @@ const LoginAuthentication = async (userParam) => {
               reject({ status: 401, message: " Not Authorised User " });
             } else {
               let payload = {
-                user_id: login_model._id,
-                username: login_model.username,
+                userId: login_model.userId,
+                userName: login_model.userName,
               };
               let token;
               token = jwt.sign(payload, "config.secrets.session", {

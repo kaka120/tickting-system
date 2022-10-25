@@ -17,7 +17,7 @@ routes_request.post('/postchatwithusrid',VerifyToken, parent_service.PostChatWit
 routes_request.post('/viewchathistory', VerifyToken, parent_service.ViewChatHistoryByIdController)
 
 /* Team section related API */
-routes_request.post('/teamregistration', parent_service.TeamRegistrationController)
+routes_request.post('/teamregistration', VerifyToken, parent_service.TeamRegistrationController)
 routes_request.post('/viewteam', parent_service.ViewTeamController)
 routes_request.post('/editteam', parent_service.EditTeamController)
 /* Team section related API */
