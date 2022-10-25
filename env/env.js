@@ -1,6 +1,6 @@
 
 const dotenv = require('dotenv');
-const env_custom_variable = dotenv.config({path:'./env/.env'})
+const process1 = dotenv.config({path:'./env/.env'})
  /* import part of connection */
-module.exports = env_custom_variable;
+module.exports = process1;
 /* import part of connection */
