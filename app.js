@@ -24,7 +24,13 @@ app.use(upload.array());
 app.use(express.static('public'));
 const port = process.env.PORT || '5000';
 
-mongoose.connect(env_custom_variable.parsed.MONGO_URI)
+const uName = process.env.usr 
+const password = process.env.pwd
+const server = process.env.ser
+
+const MONGOURL = `mongodb+srv://${uName}:${password}@${server}/?retryWrites=true&w=majority`
+
+mongoose.connect(MONGOURL)
   .then((result) => app.listen(port,function(){
     console.log(`Server started on Port ${port}`);
   }))
@@ -33,6 +39,22 @@ mongoose.connect(env_custom_variable.parsed.MONGO_URI)
     mongoose.disconnect()
   });
 
+/*
+mongoose.connect(
+  process.env.MONGO_URI,
+  {
+      user: process.env.USERNAME,
+      pass: process.env.PASSWORD,
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useFindAndModify: false
+  },
+  (err) => {
+      if(err) {
+          console.log(err)
+      } else console.log("Connected");
+  });
+*/
 app.use('/api', parent_router); 
 
 app.get('/test', (req,res) => console.log(req.headers))
