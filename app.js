@@ -42,4 +42,5 @@ mongoose.connect(MONGOURL)
 
 app.use('/api', parent_router); 
 
+
 app.get('/test', (req,res) => console.log(MONGOURL))
