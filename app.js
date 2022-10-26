@@ -27,7 +27,7 @@ const uName = process.env.usr
 const password = process.env.pwd
 const server = process.env.ser
 
-const port = process.env.port || 8080 ;
+const port = process.env.port ;
 
 const MONGOURL = `mongodb+srv://${uName}:${password}@${server}/?retryWrites=true&w=majority`
 
