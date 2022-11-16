@@ -12,6 +12,7 @@ const ViewTeamController = require('./ViewTeamController');
 const EditTeamController = require('./EditTeamController');
 
 const TeamTicketAssignment = require('./TeamTicketAssignment');
+const TicketToTeamAssignment = require('./TicketToTeamAssignmentController');
 
 module.exports = {
     LoginRegistrationController,
@@ -25,5 +26,6 @@ module.exports = {
     TeamRegistrationController,
     ViewTeamController,
     EditTeamController,
-    TeamTicketAssignment
+    TeamTicketAssignment,
+    TicketToTeamAssignment
 };

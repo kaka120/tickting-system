@@ -11,6 +11,7 @@ const TeamRegistration = require('./TeamRegistration');
 const ViewTeam = require('./ViewTeam');
 const EditTeam = require('./EditTeam');
 const TeamTicketAssignment = require('./TeamTicketAssignment');
+const TicketToTeamAssignment = require('./TicketToTeamAssignment');
 
 module.exports = {
     LoginRegsistration,
@@ -24,7 +25,8 @@ module.exports = {
     TeamRegistration,
     ViewTeam,
     EditTeam,
-    TeamTicketAssignment
+    TeamTicketAssignment,
+    TicketToTeamAssignment
 };
 
 
