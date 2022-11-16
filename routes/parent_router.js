@@ -1,6 +1,6 @@
 
 const routes_request = require('../helpers/routing_library_support');
-const parent_service = require('../controller/controller');
+const parent_service = require('../controller');
 const VerifyToken = require('../authentication/verifyToken');
 const CreateToken = require('../authentication/createToken');
 

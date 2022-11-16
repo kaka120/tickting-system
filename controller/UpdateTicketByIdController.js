@@ -1,5 +1,5 @@
 
-const userService = require('../service/parent_service');
+const userService = require('../service');
 module.exports =  function  UpdateTicketByIdController(req, res, next) {
     
     console.log("Update controller");
