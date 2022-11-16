@@ -13,14 +13,14 @@ const ticket_model = require('../model/ticket_model');
 
 const UpdateTicketByIdController = async (userParam) => {
     return new Promise( async ( resolve, reject ) => {
-          console.log(userParam)
+          console.log({userParam})
         
-          var myquery = { username: userParam.username };
-          var newvalues = { $set: { firstName:  userParam.firstName } };
-          await login_model.updateOne( myquery, newvalues ).then(function(data){ 
-            console.log("Ticket section updation registration")  
-            console.log(data)  
-        })
+        //   var myquery = { username: userParam.username };
+        //   var newvalues = { $set: { firstName:  userParam.firstName } };
+        //   await login_model.updateOne( myquery, newvalues ).then(function(data){ 
+        //     console.log("Ticket section updation registration")  
+        //     console.log(data)  
+        // })
         
 
 

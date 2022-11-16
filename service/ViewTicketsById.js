@@ -14,7 +14,7 @@ const ViewTicketsById = async (userParam) => {
     return new Promise( async ( resolve, reject ) => {
         console.log("View ticket By id section")
         console.log(userParam)
-        await ticket_model.find({ _id: userParam.ticket_id }).then(function(data,error){ 
+        await ticket_model.find({ ticketID: userParam.ticketID }).then(function(data,error){ 
             console.log("View tickets")  
             console.log(data) 
             if(!data){
@@ -25,7 +25,7 @@ const ViewTicketsById = async (userParam) => {
             else
             {
                 console.log("registared_ticket")
-                resolve( { status:201 , message: "Vendor Details fetched Successfully" , data : data } );
+                resolve( { status:201 , message: "Ticket Details fetched Successfully" , data : data } );
             }
         })
         

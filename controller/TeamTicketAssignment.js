@@ -1,5 +1,5 @@
 
-const userService = require('../service/parent_service');
+const userService = require('../service');
 module.exports =  function  register(req, res, next) {
     
     console.log("Login register controller");

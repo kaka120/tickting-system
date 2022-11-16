@@ -1,4 +1,4 @@
-const userService = require('../service/parent_service');
+const userService = require('../service');
 module.exports = function  LoginRegsistration(req, res, next) {    
     let result = userService.LoginAuthentication(req.body)
     result.then(function (result_set) {

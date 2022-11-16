@@ -1,8 +1,8 @@
 
-const userService = require('../service/parent_service');
+const userService = require('../service');
 module.exports =  function  register(req, res, next) {
     
-    console.log("Login register controller");
+    console.log("Team register controller");
     
     let result = userService.TeamRegistration(req.body)
 
@@ -18,7 +18,7 @@ module.exports =  function  register(req, res, next) {
             res.status(500).send(result_set)
             if(result_set.status===409)
             res.status(409).send(result_set)
-            
+        
     });
 
 }

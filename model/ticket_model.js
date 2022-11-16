@@ -1,8 +1,9 @@
 const Schema = require('../helpers/model_library_support');
 
 const schema = new Schema.Schema({
-        username: { type: String,required: true },                                //  Concatination of firstname and secondname
-        userid: { type: String, required: true },                                 //  Id of the registration table
+        userName: { type: String,required: true },                                //  Concatination of firstname and secondname
+        userId: { type: String, required: true },                                 //  Id of the registration table
+        ticketID: { type: String, required: true },
         ticket_creation_date: {type: Date, default: Date.now},                    //  Only ticket creation time
         ticket_incident_type: {type: String,required: true },                     //  Only ticket creation time
         ticket_status: { type: String, default: "Open" },                         //  Only ticket creation time [ Update possible [ Status: Open,closed ]]
@@ -13,7 +14,8 @@ const schema = new Schema.Schema({
         ticket_catagory: { type:  String , required: true},                       //  At any time               [ Update possible] 
         ticket_sub_catagory: { type: String , required: true},                    //  At any time               [ Update possible]
         location: { type: String , required: true},                               //  Only ticket creation time     
-        ticket_chat_group_id: { type: String, default: null }                     //  Only when if chat is started for an specific ticket 
+        ticket_chat_group_id: { type: String, default: null },                    //  Only when if chat is started for an specific ticket 
+        teamId: { type: String, default: null }                                   //  Assigned team or not [Note if no team assigned then null value]
 });
 
 

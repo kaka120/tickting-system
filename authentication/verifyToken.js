@@ -49,8 +49,8 @@ VerifyToken.use(function(req, res, next){
             console.log(err);
             return res.status(401).json({auth: false, message: "Not An Authorized User"});
         }
-        req.body.user_id = decoded.user_id;
-        req.body.username = decoded.username;
+        req.body.userId = decoded.userId;
+        req.body.userName = decoded.userName;
         next();
     });
     
